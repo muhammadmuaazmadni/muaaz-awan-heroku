@@ -4,9 +4,9 @@ const path = require('path')
 
 var server = express();
 
-server.get("/food", (req, res, next) => {
-    console.log("some one get menu");
-    res.send("menu: what do you want? food or water");
+server.get("/", (req, res, next) => {
+    console.log("some one get water");
+    res.send("menu: what do you want ? food or water");
 })
 server.get("/water", (req, res, next) => {
     console.log("some one is asking water");
@@ -22,6 +22,6 @@ server.get("/juice",(req,res,next) =>{
     res.send("juice is also available")
 })
 
-server.listen(PORT, () => {
-    console.log("server is running on port "+PORT);
-})
+server.listen(PORT || 5000), () => {
+    console.log("server is running on port 5000"+ PORT);
+};
