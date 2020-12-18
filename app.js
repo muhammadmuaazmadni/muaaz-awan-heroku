@@ -1,10 +1,10 @@
 const express = require('express')
-const path = require('path')
 const PORT = process.env.PORT || 5000
+const path = require('path')
 
 var server = express();
 
-server.get("/", (req, res, next) => {
+server.get("/food", (req, res, next) => {
     console.log("some one get menu");
     res.send("menu: what do you want? food or water");
 })
