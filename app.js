@@ -22,6 +22,6 @@ server.get("/juice",(req,res,next) =>{
     res.send("juice is also available")
 })
 
-server.listen(3000, () => {
-    console.log("server is running on port 3000");
+server.listen(PORT, () => {
+    console.log("server is running on port "+PORT);
 })
